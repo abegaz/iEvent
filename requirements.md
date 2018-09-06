@@ -13,11 +13,11 @@
 12. CRUD for user accounts
 13. Password reset
 14. Remember me on login using cookies
-15. ...
+15. Allow the invitee to accept the invite
 
 ## Non-functional Reqirements
 1. Clean UI
 2. Programmed in Java using Spring, XAMPP
 3. oAuth for Authentication with Facebook/Twitter/Google
-4. ...
-5. ...
+4. Recommending Events using User History
+5. Choose your own UI color/customize 
