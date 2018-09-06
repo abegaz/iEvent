@@ -21,3 +21,4 @@
 3. oAuth for Authentication with Facebook/Twitter/Google
 4. Recommending Events using User History
 5. Choose your own UI color/customize 
+6. Hashing Algorithm for sending secure passwords
