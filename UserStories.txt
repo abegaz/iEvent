@@ -1,0 +1,9 @@
+As the user, I want to log in so that I can access my events.
+As the user, I want to access my events so that I can schedule my time.
+As the user, I want to create more events so that I can send invites.
+AS the user, I want to allow others to edit my events so that we can collaborate.
+As the user, I want to allow the public to see my events to advertise them.
+As the user, I want to see events close to a location to learn about the local activities.
+As the user, I want to see responses to the invites I send so that I can better plan the event.
+As the user, I want to Customize my user interface to better suit my tastes.
+As the user, I want to group and sort events by different criteria to better utilize my time.
