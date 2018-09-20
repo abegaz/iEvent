@@ -7,3 +7,5 @@ As the user, I want to see events close to a location to learn about the local a
 As the user, I want to see responses to the invites I send so that I can better plan the event.
 As the user, I want to Customize my user interface to better suit my tastes.
 As the user, I want to group and sort events by different criteria to better utilize my time.
+# Feedback
+Good
