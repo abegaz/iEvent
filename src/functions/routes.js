@@ -7,7 +7,7 @@ Router.get('/', (req, res) => {
     res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
 
     // Renders the ejs page into html, which is sent to the client
-    res.render('index', {});
+    res.render('home', {});
 
     // Inside the brackets above, add any data in json format needed in the ejs file.
     // This includes the username, url to the profile pic in storage, etc.
