@@ -1,20 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-// Landing Page Route
-Router.get('/', (req, res) => {
-    // How long the page is cached in Google's CDNs
-    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
-
-    // Renders the ejs page into html, which is sent to the client
-    res.render('home', {});
-
-    // Inside the brackets above, add any data in json format needed in the ejs file.
-    // This includes the username, url to the profile pic in storage, etc.
-});
-
 // Event Page Route
-Router.get('/events', (req, res) => {
+Router.get('/', (req, res) => {
     // How long the page is cached in Google's CDNs
     res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
 
@@ -26,7 +14,7 @@ Router.get('/events', (req, res) => {
 });
 
 // Event Page Route
-Router.get('/events/:id', (req, res) => {
+Router.get('/:id', (req, res) => {
     // How long the page is cached in Google's CDNs
     res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
 
@@ -38,7 +26,7 @@ Router.get('/events/:id', (req, res) => {
 });
 
 // Edit Event Page Route
-Router.get('/events/:id/edit', (req, res) => {
+Router.get('/:id/edit', (req, res) => {
     // How long the page is cached in Google's CDNs
     res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
 
@@ -50,13 +38,13 @@ Router.get('/events/:id/edit', (req, res) => {
 });
 
 // Edit Event Put Route
-Router.put('/events/:id/edit', (req, res) => {
+Router.put('/:id/edit', (req, res) => {
     // Edit event in the database from the form response data in req.body
     
 });
 
 // New Event Page Route
-Router.get('/events/new', (req, res) => {
+Router.get('/new', (req, res) => {
     // How long the page is cached in Google's CDNs
     res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
 
@@ -68,13 +56,13 @@ Router.get('/events/new', (req, res) => {
 });
 
 // New Event Post Route
-Router.post('/events/new', (req, res) => {
+Router.post('/new', (req, res) => {
     // Create new event in the database from the form response data in req.body
 
 });
 
 // Delete Event Route
-Router.delete('/events/:id', (req, res) => {
+Router.delete('/:id', (req, res) => {
     // Delete event from the database and disassociate the event id from its owner and members
 });
 
