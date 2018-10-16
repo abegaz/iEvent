@@ -1,0 +1,33 @@
+[debug] [2018-10-16T01:15:00.609Z] ----------------------------------------------------------------------
+[debug] [2018-10-16T01:15:00.611Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Quintin\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-10-16T01:15:00.611Z] CLI Version:   5.1.1
+[debug] [2018-10-16T01:15:00.611Z] Platform:      win32
+[debug] [2018-10-16T01:15:00.611Z] Node Version:  v8.12.0
+[debug] [2018-10-16T01:15:00.613Z] Time:          Mon Oct 15 2018 21:15:00 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-10-16T01:15:00.613Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-16T01:15:00.623Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-16T01:15:00.623Z] > authorizing via signed-in user
+[debug] [2018-10-16T01:15:00.623Z] [iam] checking project csci3300-ievent for permissions ["firebase.projects.get"]
+[debug] [2018-10-16T01:15:00.625Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/csci3300-ievent:testIamPermissions  
+
+[debug] [2018-10-16T01:15:00.932Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-16T01:15:00.933Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/csci3300-ievent  
+ 
+[debug] [2018-10-16T01:15:01.339Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'H:\DevFolder\CSCI3300\iEvent\src'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-10-16T01:15:02.363Z] Fetching environment
+[debug] [2018-10-16T01:15:02.365Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/926903464133:getServerAppConfig  
+ 
+[debug] [2018-10-16T01:15:02.365Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/926903464133/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-16T01:15:02.619Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-16T01:15:02.619Z] Starting @google-cloud/functions-emulator
+[debug] [2018-10-16T01:15:02.681Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2018-10-16T01:15:04.687Z] Parsing function triggers
+[info] +  functions: app: http://localhost:5001/csci3300-ievent/us-central1/app

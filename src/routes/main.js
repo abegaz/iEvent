@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const Router = express.Router();
 
 // Landing Page Route
 Router.get('/', (req, res) => {
@@ -13,4 +13,4 @@ Router.get('/', (req, res) => {
     // This includes the username, url to the profile pic in storage, etc.
 });
 
-module.exports = router;
+module.exports = Router;

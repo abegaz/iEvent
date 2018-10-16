@@ -9,6 +9,7 @@
     "logs": "firebase functions:log"
   },
   "dependencies": {
+    "consolidate": "^0.15.1",
     "firebase-admin": "~6.0.0",
     "firebase-functions": "^2.0.3"
   },

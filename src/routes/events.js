@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const Router = express.Router();
 
 // Event Page Route
 Router.get('/', (req, res) => {
@@ -66,4 +66,4 @@ Router.delete('/:id', (req, res) => {
     // Delete event from the database and disassociate the event id from its owner and members
 });
 
-module.exports = router;
+module.exports = Router;
