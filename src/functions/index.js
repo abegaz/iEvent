@@ -23,8 +23,8 @@ const userRoute = require('./routes/user.js');
 
 // Anytime we get a request to '/', routes handles it.
 app.use('/', mainRoute);
-app.use('/events', eventsRoute);
-app.use('/user', userRoute);
+app.use('/events/', eventsRoute);
+app.use('/user/', userRoute);
 
 // MUST BE LAST
 // Exports our function.

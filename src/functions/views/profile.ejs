@@ -2,13 +2,42 @@
 <head>
     <title>Profile - <% foobar.name %> - iEvent</title>
 </head>
-<h1>Profile page</h1>
-
-<p>
-    Name: <% foobar.name %>
-</p>
-<p>
-    Bio: <% foobar.bio %>
-</p>
+<div class="row">
+    <div class="leftcolumn">
+      <div class="card2">
+        <h2>Your Public Events</h2>     
+        <div><img class="cal-img" src="calender.jpg" alt="calender" style="height:400px;"></div>     
+      </div>
+      
+      <div class="card2">
+        <h2>Your Private Events</h2>     
+        <div><img class="cal-img" src="calender.jpg" alt="calender" style="height:400px;"></div>
+      </div>
+    </div>
+    
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>Profile</h2>
+        <div><img class="profile-img" src="profile-img.jpg" alt="profile-pic"></div>
+        <p>Name: blah</p>
+        <p>Birthday: blah</p>
+        <p>Employment: blah</p>
+        <p>Stuff: blah</p>
+      </div>
+      
+      <div class="card">
+        <h3>Events You May Know</h3>
+        <p>Event 1</p>
+        <p>Event 2</p>
+        <p>Event 3</p>
+        <p>Event 4</p>	  
+      </div>
+      
+      <div class="card">
+        <h3>Contact</h3>
+        <p>Email: Stuff</p>
+      </div>
+    </div>
+  </div>
 
 <% include partials/footer %>
