@@ -3,6 +3,7 @@ const Router = express.Router();
 
 // Landing Page Route
 Router.get('/', (req, res) => {
+
     // How long the page is cached in Google's CDNs
     res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
 
