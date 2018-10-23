@@ -1,0 +1,124 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+.header {
+    padding: 5px;
+    text-align: center;
+    background: white;
+}
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+	background-color: #006666;
+	color: white;
+}
+
+
+.events-list {   
+    float: left;
+    width: 20%;
+
+}
+
+.event-selected {
+    float: right;
+    width: 80%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+.card2 {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+	text-align: center;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+	height: 500px;
+    margin-top: 20px;
+	text-align: center;
+	overflow: auto;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.list 
+{
+	height: 400px;
+	overflow: auto;
+}
+
+ul{
+	list-style-type: none;
+}
+
+li{
+		padding: 5px;
+}
+
+#events-list-event:link, #events-list-event:visited {
+    background-color: #669999;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+#events-list-event:hover, #events-list-event:active {
+    background-color: #33cccc;
+}
+
+table, th, td {
+		border: 1px solid black;
+		text-align: center;
+	}
+	#topRow {
+		background-color: #737373;
+		color:white;
+	}
+	#id-name {
+		background-color: #669999;
+		color: white;
+	}
+	
+.description {
+	background-color: #e6e6e6;	
+	color: black;
+	height: 300px;
+}
+#event-name-head,  #events-list-head{
+	text-decoration: underline;
+}
