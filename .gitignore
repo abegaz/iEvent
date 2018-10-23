@@ -1,6 +1,6 @@
 .idea
 .vscode
 
-src/.firebase/hosting.cHVibGlj.cache
-src/functions/node_modules
-src/node_modules
+.firebase/hosting.cHVibGlj.cache
+functions/node_modules
+firebase-debug.log
