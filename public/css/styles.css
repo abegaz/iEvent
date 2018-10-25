@@ -1,0 +1,66 @@
+/* CSS Document */
+:root{
+	--1: #272727; /*Dark gray*/
+	--2: #747474; /*Gray*/
+	--3: #ff921d; /*Orange*/
+	--4: #FFE400; /*Yellow*/
+	--5: #14A76C; /*Green*/
+}
+
+.bg-darker{
+	background-color:var(--1);
+	color:white;
+}
+li a{
+	color:white;
+	text-decoration: none;
+    background-color: transparent;
+	webkit-text-decoration-skip: objects;
+}
+	 
+.bg-gray{
+	background-color:var(--2);
+}
+
+.bg-orange{
+	background-color:var(--3);
+	border-color:var(--3);
+}
+
+.bg-yellow{
+	background-color:var(--4);
+}
+
+.bg-green{
+	background-color:var(--5);
+	border-color:var(--5);
+}
+li a:hover{
+	background-color: var(--5);
+    color: white;
+}
+
+.text-yellow{
+	color:var(--4);
+}
+
+.text-orange{
+	color:var(--3);
+}
+.text-green{
+	color:var(--5);
+}
+
+.hover-green:hover{
+	background-color:var(--5);
+	border-color:var(--4);
+}
+
+.hover-orange:hover{
+	background-color:var(--3);
+	border-color:var(--5);
+}
+.hover-yellow:hover{
+	background-color:var(--4);
+	border-color:var(--5);
+}
