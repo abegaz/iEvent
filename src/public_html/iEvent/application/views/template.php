@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="<?php echo site_url("css/styles.css"); ?>"/>
 </head>
 
-<body class="text-center" Style="background-image:url(../../images/background_image.jpg)">
+<body class="text-center" Style="background-image:url(<?php echo site_url(); ?>/images/background_image.jpg)">
 	<?php $this->load->view('Partials/header'); ?>
     <div class="mainContent mx-5" >
         <div class="content"><?php $this->load->view($view); ?></div>

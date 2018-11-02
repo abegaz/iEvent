@@ -7,7 +7,7 @@
 
 <div class="jumbotron jumbotron-fluid">
 <div class="container  col-xs-12">
-<?
+<?php
 echo validation_errors("<div class='errors'>", "</div>");
 
 echo form_open();//produces <form>

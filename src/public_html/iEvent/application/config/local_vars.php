@@ -1,6 +1,3 @@
-<?
-
-
-$config["emailFrom"] = "no-reply@csci3000.com";
+<?php
 $config["salt"] = "aeowigrnelkjrnverlknjv";
-$config["defaultRoleID"] = 2;
+$config["defaultRoleID"] = 4;
