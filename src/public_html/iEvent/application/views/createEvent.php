@@ -1,13 +1,9 @@
-<head>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
+<script>
   $( function() {
     $( "#datepicker" ).datepicker();
 	$( "#datepicker2" ).datepicker();
   } );
-  </script>
-</head>
+</script>
 
 <div class="jumbotron jumbotron-fluid bg-gray text-green ">
   <div class="container">
@@ -18,7 +14,7 @@
 
 <div class="jumbotron jumbotron-fluid">
 <div class="container">
-<?php
+<?
 echo validation_errors("<div class='errors'>", "</div>");
 
 echo form_open();//produces <form>
