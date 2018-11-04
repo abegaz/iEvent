@@ -37,9 +37,15 @@ class Events_Model extends CI_Model
 	
 	public function attachEvent($EventID, $UserID)
 	{
-		$this->db->set("UserID", $UserID);
-		$this->db->set("EventID", $EventID);
-		$this->db->insert("AttachedEvents");
+		$this->db->select("*");
+		$this->db->where("UserID", $UserID);
+		$this->db->where("EventID", $EventID);
+		if($this->db->get("AttachedEvents")->result() == NULL)
+		{
+			$this->db->set("UserID", $UserID);
+			$this->db->set("EventID", $EventID);
+			$this->db->insert("AttachedEvents");
+		}
 	}
 	
 	public function getAllAttachedEvents($userID)
@@ -96,6 +102,13 @@ class Events_Model extends CI_Model
 		$this->db->where("EventID", $eventID);
 		$this->db->update("Events");
 	}
+	public function decrementAttendee($eventID)
+	{
+		$count = $this->getAttendeeCount($eventID) - 1;
+		$this->db->set("AttendeeCount", $count);
+		$this->db->where("EventID", $eventID);
+		$this->db->update("Events");
+	}
 	
 	public function setUserResponse($userID, $eventID, $rsvp)
 	{
@@ -106,9 +119,18 @@ class Events_Model extends CI_Model
 		$this->db->update("AttachedEvents");
 	}
 	
+	public function getUserResponse($userID, $eventID)
+	{
+		$this->db->select("RSVP");
+		$this->db->from("AttachedEvents");
+		$this->db->where("UserID", $userID);
+		$this->db->where("EventID", $eventID);
+		return $this->db->get()->result();
+	}
+	
 	public function getAllUserEvents($UserID)
 	{
-		$this->db->select("EventName");
+		$this->db->select("`EventName`, `EventID`");
 		$this->db->where("Owner", $UserID);
 		return $this->db->get("Events")->result();
 	}

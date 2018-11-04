@@ -1,5 +1,5 @@
 <?php
-class Exercise_Model extends CI_Model
+class Email_Model extends CI_Model
 {
 	public function __construct()
 	{
@@ -28,7 +28,7 @@ class Exercise_Model extends CI_Model
 		));
 		
 		$this->email->from('noReply@lemonhut.net', "You've Recevied an iInvite!");
-		$this->email->to('csci3300.ievent@gmail.com');
+		$this->email->to($data['Email']);
 		$this->email->subject('Email Test');
 		$this->email->message($this->load->view('Templates/email_Invite',$data,TRUE));
 		$this->email->send();

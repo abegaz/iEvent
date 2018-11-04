@@ -71,7 +71,7 @@ JOIN Roles
 	
 	public function getAllUsers()
 	{
-		$this->db->select("*");
+		$this->db->select("`FirstName`, `LastName`, `Email`, `Username`, `UserID`");
 		$this->db->from("Users");
 		$this->db->order_by("FirstName");
 		$this->db->order_by("LastName");

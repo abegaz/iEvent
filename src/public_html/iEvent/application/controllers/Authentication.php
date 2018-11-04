@@ -210,9 +210,9 @@ class Authentication extends CI_Controller {
 	}
 	public function PasswordStrength($password)
 	{
-		if(is_numeric($password))
+		if(is_numeric($password) && preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $password))
 		{
-			$this->form_validation->set_message("PasswordStrength", "The given password is not strong enough.");
+			$this->form_validation->set_message("PasswordStrength", "The given password is not strong enough.\nPasswords must contain at least 8 characters,\nand at least one of the following: uppercase letter, lowercase letter, number, and special character.");
 			return false;
 		}
 		return true;

@@ -21,13 +21,17 @@ echo "<tr class='".((strlen(form_error('EventName'))>0)?"fieldError":"")."'>";
 	echo "</td>";
 echo "</tr>";
 /***************************************************************************/
-$options = "";
+$options = array(" ");
+foreach ($allUsers as $user)
+{
+	array_push($options, $user['Name']);
+}
 echo "<tr class='".((strlen(form_error('invite'))>0)?"fieldError":"")."'>";
 	echo "<td>";
 		echo form_label("Who do you want to invite?", "invite");
 	echo "</td>";
 	echo "<td>";
-		echo form_multiselect("invite", $allUsers, set_value('invite'), array('id'=>'invite'));
+		echo form_multiselect("invite[]", $options, set_value('invite'), array('id'=>'invite'));
 	echo "</td>";
 echo "</tr>";
 /***************************************************************************/
