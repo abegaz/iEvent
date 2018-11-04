@@ -104,11 +104,6 @@ class Invites extends CI_Controller {
 			
 			#							URI-1    URI-2     URI-3        URI-4    URI-5
 			#http://ievent.lemonhut.net/Invites/response/(INVITEEID)/(EVENTID)/(RSVP-ENUM)
-			$this->data = array(
-				'view' => "Tester"	,
-				'push' => $userData
-			);
-			$this->load->view('template_supplement', $this->data);
 		}
 	}
 }
