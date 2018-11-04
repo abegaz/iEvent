@@ -1,5 +1,5 @@
-<div class="jumbotron bg-gray col-xs-11">
-  <h1 class="display-4 text-yellow"><img src="../../images/logo.png" Style="width:175px; height:175px;" /> iEvent</h1>
+<div class="jumbotron bg-gray mx-5 col-xs-11">
+  <h1 class="display-4 text-yellow"><img src="<?php echo site_url();?>/images/logo.png" Style="width:175px; height:175px;" /> iEvent</h1>
   <p class="lead text-yellow">The simple solution to planning and attending events.</p>
   <hr class="my-4">
   <p></p>
@@ -7,7 +7,7 @@
 </div>
 
 
-<div class="row">
+<div class="row mx-5">
   <div class="col-xs-12 col-md-6 col-lg-4">
     <div class="card bg-gray text-orange mx-auto" >
       <div class="card-body">
