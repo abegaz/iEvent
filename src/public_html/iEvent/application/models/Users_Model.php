@@ -1,4 +1,4 @@
-<?php
+<?
 class Users_Model extends CI_Model
 {
 	public function __construct()
@@ -71,10 +71,19 @@ JOIN Roles
 	
 	public function getAllUsers()
 	{
-		$this->db->select("*");
+		$this->db->select("`FirstName`, `LastName`, `Email`, `Username`, `UserID`");
 		$this->db->from("Users");
-		$this->db->order_by("LastName");
 		$this->db->order_by("FirstName");
+		$this->db->order_by("LastName");
+		return $this->db->get()->result();
+	}
+	public function getAllUsersNames()
+	{
+		$this->db->select("FirstName");
+		$this->db->select("LastName");
+		$this->db->from("Users");
+		$this->db->order_by("FirstName");
+		$this->db->order_by("LastName");
 		return $this->db->get()->result();
 	}
 	public function getUsers($first = FALSE)

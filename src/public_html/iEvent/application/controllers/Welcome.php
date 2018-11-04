@@ -28,7 +28,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->data['view'] = "Homepage";
 		$this->load->view('template', $this->data);
-		
+		/*
 		if(!($this->session->has_userdata("userID") && is_numeric($this->session->userdata("userID"))))
 		{
 		$this->data['view'] = "LoginView";
@@ -77,6 +77,7 @@ class Welcome extends CI_Controller {
 		
 		$this->load->view("LoginView");
 		}
+		*/
 	}
 	public function demo()
 	{

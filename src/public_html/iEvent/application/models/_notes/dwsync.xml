@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="index.html" server="107.180.58.57" local="131847352800000000" remote="131847352800000000" Dst="2" />
-<file name="Users_Model.php" server="107.180.58.57" local="131847352800000000" remote="131847352800000000" Dst="2" />
-<file name="Events_Model.php" server="107.180.58.57" local="131847638172452871" remote="131847529800000000" Dst="2" />
 <file name="Exercise_Model.php" server="107.180.58.57" local="131847352800000000" remote="131847352800000000" Dst="2" />
+<file name="index.html" server="107.180.58.57" local="131847352800000000" remote="131847352800000000" Dst="2" />
+<file name="Users_Model.php" server="107.180.58.57" local="131858375494275607" remote="131858303400000000" Dst="1" />
+<file name="Events_Model.php" server="107.180.58.57" local="131858359112598629" remote="131858286600000000" Dst="1" />
+<file name="Email_Model.php" server="107.180.58.57" local="131858377269587149" remote="131858305200000000" Dst="1" />
 </dwsync>
