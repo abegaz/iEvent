@@ -8,7 +8,7 @@
 <div class="jumbotron jumbotron-fluid">
 <div class="container">
 
-<?php
+<?
 echo validation_errors("<div class='errors'>", "</div>");
 
 echo form_open();//produces <form>
@@ -26,6 +26,8 @@ echo form_input($options);
 	echo "</td>";
 echo "</tr>";
 
+#####################################################################################
+
 echo "<tr class='".((strlen(form_error('Password'))>0)?"fieldError":"")."'>";
 	echo "<td>";
 echo form_label("Password", "Password");
@@ -34,6 +36,16 @@ echo form_label("Password", "Password");
 echo form_password("Password", "", array('id'=>'Password'));
 	echo "</td>";
 echo "</tr>";
+
+#####################################################################################
+
+echo "<tr class='".((strlen(form_error('Cap'))>0)?"fieldError":"")."'><td></td>";
+echo "<td>";
+echo $this->recaptcha->create_box(array('id'=>'Cap'));
+echo "</td>";
+
+#####################################################################################
+
 echo "<tr class='buttons'><td></td><td>";
 echo form_submit("Login", "Login");
 echo form_submit("createUser", "Register");
@@ -42,3 +54,12 @@ echo form_close();//produces </form>
 ?>
 </div>
 </div>
+
+<script>
+grecaptcha.ready(function() {
+grecaptcha.execute('6Ld4tXgUAAAAAPBEobjzvKU9qbtnLP2eu1nDabcE', {action: 'action_name'})
+.then(function(token) {
+// Verify the token on the server.
+});
+});
+</script>
