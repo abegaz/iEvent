@@ -26,9 +26,9 @@ body {
 }
 
 .event-selected {
-    float: right;
-    width: 70%;
-    background-color: #B7B7B7;
+    
+    width: 100%;
+    background-color: #BEBEBE;
     padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 20px;
@@ -41,7 +41,7 @@ body {
 }
 
 .card {
-    background-color: #CECECE;
+    background-color: #D1D1D1;
     padding: 20px;
 	height: 500px;
     margin-top: 20px;
@@ -98,7 +98,8 @@ table, th, td {
 .description {
 	background-color: #e6e6e6;	
 	color: black;
-	height: 300px;
+	padding: 10px;
+	
 }
 #event-name-head,  #events-list-head{
 	text-decoration: underline;
@@ -118,3 +119,24 @@ table, th, td {
 	width: 140px;
 	height: 60px;
 }
+
+	
+/* width */
+	::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+ ::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+ }
