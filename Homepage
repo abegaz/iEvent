@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script class="GoogleSignIn" src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <title>IEVENT</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/the-big-picture.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+	<section>
+		<img STYLE="position:absolute; TOP:1px; LEFT:1px; WIDTH: 1900px; HEIGHT:700px" src="images/Background.jpg">
+		<img STYLE="position:absolute; TOP:0px; LEFT:1400px; WIDTH:140px; HEIGHT:100px" src="images/ievent.png"> 
+	</section>
+	
+	<section>
+		<img STYLE="position:absolute; TOP:15px; LEFT:350px; WIDTH:200px; HEIGHT:200px" src="images/HappyMan.jpg">
+		<img STYLE="position:absolute; TOP:140px; LEFT:725px; WIDTH:700px; HEIGHT:500px" src="">
+		<img STYLE="position:absolute; TOP:485px; LEFT:350px; WIDTH:150px; HEIGHT:150px" src="images/Gold Star.jpg">
+	</section>
+	
+
+  
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+      <div class="container">
+	  <form>
+		<button class="login" onclick="OnSignIn(nomanvideor4@yahoo.com)">Login</button>
+		<style>
+			button {
+				background-color: Transparent;
+				color: silver;
+				background-repeat:no-repeat;
+				border: none;
+				cursor:pointer;
+				overflow: hidden;
+				outline:none;
+		}
+		</style>
+
+	  </form>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	
+
+
+    <!-- Page Content -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+		  
+            <h1 style="position:absolute; TOP:0px; LEFT:-150px; WIDTH:100px; HEIGHT:100px; font-family:Comic Sans MS; color:white;" class="mt-5">IEvent</h1>
+            <p style="position:absolute; TOP:100px; LEFT:-150px; WIDTH:100px; HEIGHT:100px; font-family:Comic Sans MS; color:white;">Plan your event today</p>
+			
+			<p style="position:absolute; TOP:450px; LEFT:50px; WIDTH:300px; HEIGHT:100px; font-family:Comic Sans MS; font-family:Comic Sans MS; color:white;">Rated the number 1 app by Times Magazine</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<script>
+		function Popup()
+		{
+			window.prompt("sometext","defaultText");
+		}
+	</script>
+	
+	<script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
+
+	
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
