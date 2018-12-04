@@ -37,15 +37,9 @@ class Events_Model extends CI_Model
 	
 	public function attachEvent($EventID, $UserID)
 	{
-		$this->db->select("*");
-		$this->db->where("UserID", $UserID);
-		$this->db->where("EventID", $EventID);
-		if($this->db->get("AttachedEvents")->result() == NULL)
-		{
-			$this->db->set("UserID", $UserID);
-			$this->db->set("EventID", $EventID);
-			$this->db->insert("AttachedEvents");
-		}
+		$this->db->set("UserID", $UserID);
+		$this->db->set("EventID", $EventID);
+		$this->db->insert("AttachedEvents");
 	}
 	
 	public function getAllAttachedEvents($userID)
@@ -82,57 +76,6 @@ class Events_Model extends CI_Model
 		$this->db->select("*");
 		$this->db->from("Events");
 		return $this->db->get()->result();
-	}
-	
-	public function getAttendeeCount($eventID)
-	{
-		#SELECT AttendeeCount FROM `Events` WHERE `EventID` = $eventID
-		
-		$this->db->select("AttendeeCount");
-		$this->db->from("Events");
-		$this->db->where("EventID", $eventID);
-		$array = $this->db->get()->result();
-		return $array[0]->{'AttendeeCount'};
-	}
-	
-	public function incrementAttendee($eventID)
-	{
-		$count = $this->getAttendeeCount($eventID) + 1;
-		$this->db->set("AttendeeCount", $count);
-		$this->db->where("EventID", $eventID);
-		$this->db->update("Events");
-	}
-	public function decrementAttendee($eventID)
-	{
-		$count = $this->getAttendeeCount($eventID) - 1;
-		$this->db->set("AttendeeCount", $count);
-		$this->db->where("EventID", $eventID);
-		$this->db->update("Events");
-	}
-	
-	public function setUserResponse($userID, $eventID, $rsvp)
-	{
-		#UPDATE `AttachedEvents` SET `RSVP` = $rsvp WHERE `EventID` = $eventID AND `UserID` = $userID
-		$this->db->set("RSVP", $rsvp);
-		$this->db->where("EventID", $eventID);
-		$this->db->where("UserID", $userID);
-		$this->db->update("AttachedEvents");
-	}
-	
-	public function getUserResponse($userID, $eventID)
-	{
-		$this->db->select("RSVP");
-		$this->db->from("AttachedEvents");
-		$this->db->where("UserID", $userID);
-		$this->db->where("EventID", $eventID);
-		return $this->db->get()->result();
-	}
-	
-	public function getAllUserEvents($UserID)
-	{
-		$this->db->select("`EventName`, `EventID`");
-		$this->db->where("Owner", $UserID);
-		return $this->db->get("Events")->result();
 	}
 }
 ?>

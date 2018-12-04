@@ -118,4 +118,21 @@ class Administrator extends CI_Controller {
 			redirect("authentication/Login");
 		}
 	}
+	
+	public function dashboard()
+	{
+		if($this->session->has_userdata("RoleNames") && in_array("Admin", $this->session->userdata("RoleNames")))
+		{
+			
+			$this->data = array(
+				'view' => "AdminTools/Dashboard"
+			);
+			$this->load->view('template', $this->data);
+				
+		}
+		else
+		{
+			redirect("authentication/Login");
+		}
+	}
 }

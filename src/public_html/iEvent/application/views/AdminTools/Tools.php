@@ -23,4 +23,9 @@
         <a href="<?php echo site_url("Administrator/exercises");?>">Click here to view all current exercises!</a>
         </td>
     </tr>
+    <tr>
+    	<td>
+        <a href="<?php echo site_url("Administrator/dashboard");?>">Click here to view your dashboard!</a>
+        </td>
+    </tr>
 </table>

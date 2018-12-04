@@ -34,22 +34,18 @@ class Authentication extends CI_Controller {
 		{
 			redirect("/");
 		}
-		$this->load->library('recaptcha');
-		$this->recaptcha->set_parameter('theme', 'dark');
-		
 		
 		$this->data['view'] = "LoginView";
-
 		if($this->input->post("Login"))
 		{
 			$this->load->model("Users_Model");
-			
-			//Validates our login form
 			$this->form_validation->set_rules("Username", "Username", "required|min_length[3]");
 			$this->form_validation->set_rules("Password", "Password", "required|min_length[8]|callback_authenticate");
-			$this->form_validation->set_rules("Cap", "Cap", "callback_authenticateCAP");
-			
-			if($this->form_validation->run() === TRUE)
+			if($this->form_validation->run() === FALSE)
+			{
+				//failed a rule
+			}
+			else
 			{
 				//passed all rules
 				$this->data['userID'] = $this->Users_Model->getUserID($this->input->post("Username"));
@@ -78,10 +74,6 @@ class Authentication extends CI_Controller {
 				$this->session->set_flashdata("message", "Logged in successfully!");
 				redirect("Profile");
 			}
-			else
-			{
-				//failed a rule
-			}
 		}
 		else if($this->input->post("createUser"))
 		{
@@ -91,7 +83,6 @@ class Authentication extends CI_Controller {
 		
 		$this->data['header'] = "Log In";
 		$this->load->view('template', $this->data);
-		
 	}
 	
 	public function authenticate($password)
@@ -106,16 +97,6 @@ class Authentication extends CI_Controller {
 		}
 		return true;
 	}
-	public function authenticateCAP()
-	{
-		$response = $this->recaptcha->is_valid(NULL, NULL);
-		if (!($response['success'] == TRUE))
-		{
-			$this->form_validation->set_message("authenticateCAP", "Please complete the reCAPTCHA.");
-			return false;
-		}
-		return true;
-	}
 	
 	public function Register()
 	{
@@ -124,9 +105,6 @@ class Authentication extends CI_Controller {
 		{
 			redirect("/");
 		}
-		
-		$this->load->library('recaptcha');
-		$this->recaptcha->set_parameter('theme', 'dark');
 		
 		//at the top so it can be overriden by successful form submission
 		$this->data['view'] = "createUser";
@@ -195,7 +173,6 @@ class Authentication extends CI_Controller {
 			);
 			
 			$this->form_validation->set_rules($configArray);
-			$this->form_validation->set_rules("Cap", "Cap", "callback_authenticateCAP");
 			
 			if($this->form_validation->run() === FALSE)
 			{
@@ -233,19 +210,12 @@ class Authentication extends CI_Controller {
 	}
 	public function PasswordStrength($password)
 	{
-		if(is_numeric($password) && preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $password))
+		if(is_numeric($password))
 		{
-			$this->form_validation->set_message("PasswordStrength", "The given password is not strong enough.\nPasswords must contain at least 8 characters,\nand at least one of the following: uppercase letter, lowercase letter, number, and special character.");
+			$this->form_validation->set_message("PasswordStrength", "The given password is not strong enough.");
 			return false;
 		}
 		return true;
-	}
-	
-	public function securimage() 
-	{
-		$this->load->library('securimage');
-		$img = new Securimage();
-		$img->show(); // alternate use: $img->show('/path/to/background.jpg');
 	}
 }
 

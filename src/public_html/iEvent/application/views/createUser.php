@@ -7,7 +7,7 @@
 
 <div class="jumbotron jumbotron-fluid">
 <div class="container  col-xs-12">
-<?php
+<?
 echo validation_errors("<div class='errors'>", "</div>");
 
 echo form_open();//produces <form>
@@ -20,8 +20,6 @@ echo form_label("First Name", "FirstName");
 echo form_input("FirstName", set_value('FirstName'), array('id'=>'FirstName'));
 	echo "</td>";
 echo "</tr>";
-
-########################################################################################
 
 $options = array(
 	'name' => 'LastName',
@@ -37,8 +35,6 @@ echo form_input($options);
 	echo "</td>";
 echo "</tr>";
 
-##########################################################################################
-
 $options['name'] = 'Username';
 $options['id'] = 'Username';
 $options['value'] = set_value('Username');
@@ -50,8 +46,6 @@ echo form_label("Username", "Username");
 echo form_input($options);
 	echo "</td>";
 echo "</tr>";
-
-##########################################################################################
 
 $options['name'] = 'Email';
 $options['id'] = 'Email';
@@ -65,8 +59,6 @@ echo form_input($options);
 	echo "</td>";
 echo "</tr>";
 
-#########################################################################################
-
 echo "<tr class='".((strlen(form_error('Password'))>0)?"fieldError":"")."'>";
 	echo "<td>";
 echo form_label("Password", "Password");
@@ -76,8 +68,6 @@ echo form_password("Password", "", array('id'=>'Password'));
 	echo "</td>";
 echo "</tr>";
 
-########################################################################################
-
 echo "<tr class='".((strlen(form_error('PasswordConf'))>0)?"fieldError":"")."'>";
 	echo "<td>";
 echo form_label("Password Confirmation", "PasswordConf");
@@ -86,16 +76,6 @@ echo form_label("Password Confirmation", "PasswordConf");
 echo form_password("PasswordConf", "", array('id'=>'PasswordConf'));
 	echo "</td>";
 echo "</tr>";
-
-#######################################################################################
-
-echo "<tr class='".((strlen(form_error('Cap'))>0)?"fieldError":"")."'><td></td>";
-echo "<td>";
-echo $this->recaptcha->create_box(array('id'=>'Cap'));
-echo "</td>";
-
-#######################################################################################
-
 echo "<tr>";
 	echo "<td></td><td>";
 		echo form_submit("MySubmit", "Register User");
